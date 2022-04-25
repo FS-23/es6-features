@@ -58,15 +58,15 @@ console.log('students after forEach:', students)
 
 //  splice
 
-// let deletedStudents = students.splice(2,3)
+ let deletedStudents = students.splice(2,3)
 
-// console.log('deletedStudents:', deletedStudents)
-// console.log('students:', students)
+ console.log('deletedStudents:', deletedStudents)
+ console.log('students:', students)
 
 
 // redius age
 
-// width forEach
+// - width forEach
 
 let totalAge = 0
 
@@ -80,7 +80,7 @@ console.log('all:', all)
 console.log('totalAge:', all,  totalAge)
 
 
-// with reduce
+// - with reduce
 let totalAgeWithReduce = students.reduce((total,student)=>{
     console.log(total , student)
 
@@ -92,7 +92,7 @@ console.log('totalAgeWithReduce:', totalAgeWithReduce)
 
 /*  map */
 
-
+students.map(student => console.log('student:', student ))
 
 
 /* map usage for list in react */
@@ -115,7 +115,7 @@ console.log('totalAgeWithReduce:', totalAgeWithReduce)
 
 
 /**** CLASSES  ******/
-console.clear()
+console.log("---------------- class ------------------")
 let article1 = { name: "Camera nikon", color: "block", description:"NIKON", image:"https://fs323.com/image2.png", displayName: function() { 
     console.log("Hello i'm "+this.name)
 } }
@@ -160,8 +160,7 @@ console.log('table:',table)
 table.displayName()
 
 
-/**   */
-
+/** spread operation  */
 
 
 let obj1 = {name: "Noor", formation: "ReactJS"}
@@ -171,11 +170,13 @@ let obj1 = {name: "Noor", formation: "ReactJS"}
 // obj2.formation = obj1.formation
 
 
-obj2 = {...obj1 ,}
-console.log('obj2:', obj2)
+
 // let obj2 = {name: "Noor", formation: "ReactJs", age: "", classA:""}
 
+// - with ES6
 
+obj2 = {...obj1 ,}
+console.log('obj2:', obj2)
 let array1 = [{name: "John", age: 12}, {name: "Khalid", age: 33}]
 let array2 = [{name: "Carl", age: 22}, {name: "Jane", age: 43}]
 
@@ -187,6 +188,9 @@ console.log('array3', array3)
 /*** destruration */
 
 let user1 = {token: "yuuur884511dnjjhhd" , email: "carl@carl.org" , username: "Karldev"}
+let numbers = [1,2,3,5,2,1];
+
+const [nb1 ,nb2 ,,nb3] = numbers
 
 // classique
 // let token = user1.token
@@ -197,10 +201,11 @@ let user1 = {token: "yuuur884511dnjjhhd" , email: "carl@carl.org" , username: "K
 
 // ES6 
 
-const {token , email } = user1
+const {email ,token ,  } = user1
 
 console.log('tokern - email ', token , email)
 
 
 /** Module */
+// see module1.js file and main.js 
 
